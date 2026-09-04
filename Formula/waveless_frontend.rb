@@ -4,16 +4,16 @@ class WavelessFrontend < Formula
   version "0.2.1"
   if OS.mac? && Hardware::CPU.arm?
     url "https://github.com/nv0skar/Waveless/releases/download/0.2.1/waveless_frontend-aarch64-apple-darwin.tar.xz"
-    sha256 "6c178b850537f2db89766e4070d9a4f279d9e47d6be14fba763566e528ede389"
+    sha256 "378c4c640040b7e2bcbc9b9dd439ed160a82d0635deb4ad4f65d7813cd2b37ce"
   end
   if OS.linux?
     if Hardware::CPU.arm?
       url "https://github.com/nv0skar/Waveless/releases/download/0.2.1/waveless_frontend-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "7cadd3884191dd5b969d71095d8f739b96251dd44214fe6e323114da40730d47"
+      sha256 "dd4110e882379ef01e6b1299736831aec1e05067e6f8281cd7dd766a46a690a3"
     end
     if Hardware::CPU.intel?
       url "https://github.com/nv0skar/Waveless/releases/download/0.2.1/waveless_frontend-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "5c81954ae00b8b0cf892d91be44b4abaf84dd7cc15cdcf1bb741c59546b58e33"
+      sha256 "b49cf03cfbdf5d9a9d624409870f10e29fe6641ef2b07ee9f6fad6bfe33b9a21"
     end
   end
 
@@ -40,13 +40,13 @@ class WavelessFrontend < Formula
 
   def install
     if OS.mac? && Hardware::CPU.arm?
-      bin.install "waveless_frontend"
+      bin.install "waveless"
     end
     if OS.linux? && Hardware::CPU.arm?
-      bin.install "waveless_frontend"
+      bin.install "waveless"
     end
     if OS.linux? && Hardware::CPU.intel?
-      bin.install "waveless_frontend"
+      bin.install "waveless"
     end
 
     install_binary_aliases!
