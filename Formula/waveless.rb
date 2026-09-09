@@ -4,16 +4,16 @@ class Waveless < Formula
   version "0.2.1"
   if OS.mac? && Hardware::CPU.arm?
     url "https://github.com/nv0skar/Waveless/releases/download/0.2.1/waveless-aarch64-apple-darwin.tar.xz"
-    sha256 "1f52f39ab751dc781c48d2ef823c3af56707c4bf6badd546fe9fa3a1386ee86a"
+    sha256 "5d6016c8af1742f3b156180927540e96081d9c4a51054bd626092ad56ad0cf18"
   end
   if OS.linux?
     if Hardware::CPU.arm?
       url "https://github.com/nv0skar/Waveless/releases/download/0.2.1/waveless-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "8b9e93849d58ed6028e6296403e3e1a436a6e5389ea2daa6ac238d22181f2e67"
+      sha256 "2ffeec8de04f0306b33268417a5d9ef89eb4a0e562628cee46f3a457520bab62"
     end
     if Hardware::CPU.intel?
       url "https://github.com/nv0skar/Waveless/releases/download/0.2.1/waveless-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "e45a1e4360aed04959830435d153eabe9293c1eb2c5dbb17f506848e5dea4c71"
+      sha256 "142f1617c62c1073860c1e5b31840c65af3387132d3d36702a4b51ae0431fe52"
     end
   end
 
