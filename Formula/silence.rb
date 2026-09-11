@@ -1,19 +1,19 @@
 class Silence < Formula
   desc "An educational framework for deploying APIs (based on a MySQL schema) and web applications."
   homepage "https://github.com/nv0skar/SilenceEvolution"
-  version "0.0.5"
+  version "0.0.6"
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/nv0skar/SilenceEvolution/releases/download/v0.0.5/silence-aarch64-apple-darwin.tar.xz"
-    sha256 "15eb5340569fe91572804499eb674ac8cbff2fd22d5354017535abbcad81700e"
+    url "https://github.com/nv0skar/SilenceEvolution/releases/download/v0.0.6/silence-aarch64-apple-darwin.tar.xz"
+    sha256 "aaab40e8b1ba5fa825830661b644b3e7d0f31558921b7db64beaed210357ae4e"
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/nv0skar/SilenceEvolution/releases/download/v0.0.5/silence-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "85c0445d1bfe2878299fae42d1294c782a234d7c7fc79afa84403da18a5bc62c"
+      url "https://github.com/nv0skar/SilenceEvolution/releases/download/v0.0.6/silence-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "db4afc20d19b61aaf28a978b3210f2819979dbfa11159db595e75471b9da6871"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/nv0skar/SilenceEvolution/releases/download/v0.0.5/silence-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "7b0fba838a1fd211239f9219849d420099ec110e68d6d6babd2f8378cecbc30a"
+      url "https://github.com/nv0skar/SilenceEvolution/releases/download/v0.0.6/silence-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "8125c0f01e16a997167930116caf0a4be225b12d0cc3d8d8f652c9f55805b6c0"
     end
   end
 
@@ -42,9 +42,15 @@ class Silence < Formula
   end
 
   def install
-    bin.install "silence" if OS.mac? && Hardware::CPU.arm?
-    bin.install "silence" if OS.linux? && Hardware::CPU.arm?
-    bin.install "silence" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "silence"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "silence"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "silence"
+    end
 
     install_binary_aliases!
 
