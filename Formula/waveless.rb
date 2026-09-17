@@ -1,19 +1,19 @@
 class Waveless < Formula
   desc "Bring your data model → generate fast, portable and battle-ready APIs 🚀."
   homepage "https://github.com/nv0skar/waveless"
-  version "0.3.0"
+  version "0.4.0"
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/nv0skar/waveless/releases/download/0.3.0/waveless-aarch64-apple-darwin.tar.xz"
-    sha256 "43a2226f0a9ba0fabe38c70d3008234359d49b0b866dbc28a86c651b64e9eef5"
+    url "https://github.com/nv0skar/waveless/releases/download/0.4.0/waveless-aarch64-apple-darwin.tar.xz"
+    sha256 "bae07e67939443ea8e27e2141547520d2060a5fbd75a5140f8611817da46ef43"
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/nv0skar/waveless/releases/download/0.3.0/waveless-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "9701b2463c4951a341d268cd8be816bca4dcc40d45463467f861bd5057def850"
+      url "https://github.com/nv0skar/waveless/releases/download/0.4.0/waveless-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "a1bcc89b845580c538212247e09a13da8dedfbe49c3bbc0c92eccc1a915be914"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/nv0skar/waveless/releases/download/0.3.0/waveless-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "895249d6f01601c8d027c19ec104b5d9e064c11465626e8d5d78a8afda586ef4"
+      url "https://github.com/nv0skar/waveless/releases/download/0.4.0/waveless-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "74c2ca5e651815845a156a244e6c06463880f2f1804d1ab95e7d14a34132003b"
     end
   end
 
