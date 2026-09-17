@@ -4,16 +4,16 @@ class Silence < Formula
   version "0.0.8"
   if OS.mac? && Hardware::CPU.arm?
     url "https://github.com/nv0skar/SilenceEvolution/releases/download/0.0.8/silence-aarch64-apple-darwin.tar.xz"
-    sha256 "642c8d74ac7558cc89f93930c533acc80829a9d1406154960e50d41682868e0a"
+    sha256 "0ea134f06cf333a7e74d0ad029e0f655b2ae024ed29833b68d9f8b5912d41deb"
   end
   if OS.linux?
     if Hardware::CPU.arm?
       url "https://github.com/nv0skar/SilenceEvolution/releases/download/0.0.8/silence-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "c871224550cf5d787787af4554d6ef90280d9ec3fc92b62542317035f046f523"
+      sha256 "c162b96664d1e7026967ce2859f00782f09d04ba803938a906177a9150ada9cc"
     end
     if Hardware::CPU.intel?
       url "https://github.com/nv0skar/SilenceEvolution/releases/download/0.0.8/silence-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "4454d3c32945b746ac220a58eb6d1bc2a423d8764f213798437fa414e4031bdf"
+      sha256 "622cd8027c5a5d83c7c1e3e317fdf7a831f3185918e033452b29fa109407af27"
     end
   end
 
