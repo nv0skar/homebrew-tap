@@ -1,19 +1,19 @@
 class Silence < Formula
   desc "An educational framework for deploying APIs (based on a MySQL schema) and web applications."
   homepage "https://github.com/nv0skar/SilenceEvolution"
-  version "0.0.11"
+  version "0.0.12"
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/nv0skar/SilenceEvolution/releases/download/0.0.11/silence-aarch64-apple-darwin.tar.xz"
-    sha256 "21111de922a1f021ed353e1ef2d7dd2c3b10e060b775b2e09a20ad5250dd4668"
+    url "https://github.com/nv0skar/SilenceEvolution/releases/download/0.0.12/silence-aarch64-apple-darwin.tar.xz"
+    sha256 "e4e0ecdc7a84e0d34ce46daf8545cfb960d2bd488568dbb75265e614f90fd4b7"
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/nv0skar/SilenceEvolution/releases/download/0.0.11/silence-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "8811e2f01a8bf060e8676d872df9086d3ef124a32f4a307e237cb0bba7132268"
+      url "https://github.com/nv0skar/SilenceEvolution/releases/download/0.0.12/silence-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "7a83990599fc12d4085c4c812c9189c4ab8264439a13b6df032e3c335ab7427b"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/nv0skar/SilenceEvolution/releases/download/0.0.11/silence-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "eef0e0868bb0e99d0046cac8d261ed79ee532313ed7a61f363ad7b5cdfebb8d7"
+      url "https://github.com/nv0skar/SilenceEvolution/releases/download/0.0.12/silence-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "ec950886afe749b392237da662b2f44334130e3439993c3546528b8210075261"
     end
   end
 
